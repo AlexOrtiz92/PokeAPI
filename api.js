@@ -459,12 +459,12 @@ api.get("/api/pokemons/:pokemonID/location/:locationID", (request, response) => 
 
 
 
+//Ahora configuraremos una variable de entorno
+const PORT = process.env.PORT || 1010;
 
-const port = "5555";
-const host = "127.0.0.1";
 
-api.listen(port, host, () => {
-  console.log(`Servidor corriendo en http://${host}:${port}/api/pokemon`);
+api.listen(PORT, () => {
+  console.log(`PokeApi corriendo en puerto ${PORT}`);
 });
 
 
